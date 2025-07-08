@@ -1,14 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-echo "[HOOK] pre-commit – Dependencies & Tests"
-
-# 1) pigar bei Bedarf installieren
 if ! command -v pigar >/dev/null 2>&1; then
-  echo "[HOOK] installing pigar …"
   python3 -m pip install --user --upgrade pigar
 fi
 
-# 2) requirements.txt regenerieren & erneut stagen
-pigar gen -o requirements.txt
+pigar gen
 git add requirements.txt
