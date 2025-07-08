@@ -6,5 +6,4 @@ if ! command -v pigar >/dev/null 2>&1; then
 fi
 
 pigar gen
-git add requirements.txt
 git add .
