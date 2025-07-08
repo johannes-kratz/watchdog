@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+while [[ -n "$(git status --porcelain)" ]]; do
+  sleep 2
+done
+
+
 git push -u origin $(git symbolic-ref --short HEAD)
