@@ -4,6 +4,6 @@ set -euo pipefail
 if ! command -v pigar >/dev/null 2>&1; then
   python3 -m pip install --user --upgrade pigar
 fi
-
 pigar gen
+
 git add .
