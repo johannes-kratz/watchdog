@@ -1,9 +1,13 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+echo ".idea/" >> .gitignore
+echo ".venv/" >> .gitignore
+echo ".githooks/" >> .gitignore
+
 if ! command -v pigar >/dev/null 2>&1; then
   python3 -m pip install --user --upgrade pigar
 fi
 pigar gen
 
-git add . ':(exclude).idea/' ':(exclude).venv/'
+git add .
