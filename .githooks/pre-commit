@@ -7,3 +7,5 @@ fi
 pigar gen
 
 git add . ':(exclude).*/'
+
+#asdf#
